@@ -21,3 +21,21 @@ DT框架是Dimensionsoft自主研发的一个“模拟终端”框架，使用**
 
 ----------
 ## DConsole的使用
+**Terminal(struct)**
+Terminal是一个访问其它核心类成员的一个必要措施，可以通过如下的方式来使用Terminal：  
+```C#
+Terminal.Console.AppendForConsole(OutPut, "Hello!");   //使用TerminalObject的对象Console
+```
+----------
+**TerminalObject**
+TerminalObject是整个Terminal核心类中的基础，整个Terminal离不开该类  
+以下是TerminalObject类中的成员：
+|成员名|说明|
+|:----|:----:|
+|`AppendForConsole(RichTextBox richtextbox, string str, AssemblyColor ac)`|在Console屏幕上追加输出“str”，输出颜色为“ac”（参数“ac”可不写）|
+|`WriteForConsole(RichTextBox richtextbox, string str, AssemblyColor ac)`|在Console屏幕上先清空，后输出“str”，输出颜色为“ac”（参数“ac”可不写）|
+|`GetForConsole(RichTextBox richtextbox)`|获得RichTextBox“richtextbox”内的内容并返回其内容，类型为“string”|
+|`GetLen(RichTextBox name)`|返回RichTextBox“name”内的内容的长度并返回，类型为“int”|
+|`Clear(RichTextBox name)`|清空“name”内的所有内容|
+|`GetForTextBox(TextBox name)`|获得TextBox“name”中的内容，并返回，类型为“string”|
+|`GetSplitCommand(TextBox name, char splitChar)`|获得TextBox“name”中的内容，并按‘splitChar’分割为字符列表，并返回，类型为“string[]”|
