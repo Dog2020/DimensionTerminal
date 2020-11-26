@@ -21,6 +21,15 @@ DT框架是Dimensionsoft自主研发的一个“模拟终端”框架，使用**
 
 ----------
 ## DConsole的使用
+**DConsole(namespace)**
+DConsole是框架的命名空间，在使框架前，需要：
+```C#
+using DConsole
+```
+或者使用如下方式：
+```C#
+DConsole.Terminal.Console.AppendForConsole(OutPut, "hello")  输出
+```
 **Terminal(struct)**
 Terminal是一个访问其它核心类成员的一个必要措施，可以通过如下的方式来使用Terminal：  
 ```C#
