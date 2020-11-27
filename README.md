@@ -28,7 +28,7 @@ using DConsole
 ```
 或者使用如下方式：
 ```C#
-DConsole.Terminal.Console.AppendForConsole(OutPut, "hello")  输出
+DConsole.Terminal.Console.AppendForConsole(OutPut, "hello")  //输出
 ```
 **Terminal(struct)**
 Terminal是一个访问其它核心类成员的一个必要措施，可以通过如下的方式来使用Terminal：  
