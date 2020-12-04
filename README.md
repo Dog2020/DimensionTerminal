@@ -38,6 +38,7 @@ private void InitRun(object sender, RoutedEventArgs e)
 ```   
 它的作用是：负责Terminal的所有主要工作  
 或者您可以把它理解为一个“主函数”  
+
 ----------
 **TerminalObject(class)**    
 TerminalObject是整个Terminal核心类中的基础，整个Terminal离不开该类  
