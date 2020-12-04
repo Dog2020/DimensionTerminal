@@ -26,14 +26,22 @@ DConsole是框架的命名空间，在使框架前，需要：
 ```C#
 using DConsole
 ```
-或者使用如下方式：
+或者使用如下方式，不使用“using”指令：
 ```C#
 DConsole.Terminal.Console.AppendForConsole(OutPut, "hello")  //输出
 ```
 ----------
+**init(func)**
+在文件中，您可以看到这样一个函数：  
+```C#
+private void InitRun(object sender, RoutedEventArgs e)
+```   
+它的作用是：负责Terminal的所有主要工作  
+或者您可以把它理解为一个“主函数”  
+----------
 **TerminalObject(class)**    
 TerminalObject是整个Terminal核心类中的基础，整个Terminal离不开该类  
-以下是TerminalObject类中的成员：
+以下是TerminalObject类中的主要成员：
 |成员名|说明|
 |:----|:----:|
 |`AppendForConsole(RichTextBox richtextbox, string str, AssemblyColor ac)`|在Console屏幕上追加输出“str”，输出颜色为“ac”（参数“ac”可不写）|
@@ -43,3 +51,25 @@ TerminalObject是整个Terminal核心类中的基础，整个Terminal离不开�
 |`Clear(RichTextBox name)`|清空“name”内的所有内容|
 |`GetForTextBox(TextBox name)`|获得TextBox“name”中的内容，并返回，类型为“string”|
 |`GetSplitCommand(TextBox name, char splitChar)`|获得TextBox“name”中的内容，并按‘splitChar’分割为字符列表，并返回，类型为“string[]”|
+|`GetSplit(string name, char splitChar)`|按照“splitChar”分割“name”为字符列表，并返回|
+  
+**Example:**
+如果你想输出一段文字为“hello”，可以这样做：
+```C#
+using DConsole;
+namespace Terminal
+{
+    private void InitRun(object sender, RoutedEventArgs e)
+    {
+        TerminalObject.AppendForConsole(OutPut, "hello");   //输出文字
+    }
+}
+```  
+---------
+**TerminalEvents(class/event)**
+在“Terminal”中，所有事情都是由某一个事件所产生的，所以便出现了一个“TerminalEvents”类  
+这个类的主要作用便是担当“Terminal”的“事件引擎”，负责处理，绑定（注册）事件
+以下是该类的几个主要成员：
+|成员名|说明|
+|:----|:----:|
+|||
