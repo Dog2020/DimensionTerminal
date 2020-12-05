@@ -85,3 +85,18 @@ namespace Terminal
 |`RegisterIsErrorEvent(TODO Todo)`|对“IsErr”注册一个事件函数“Todo”|
 |`CommandTrigger(bool Condition)`|当达到“Condition”时，执行事件“IsCommandTrigger”对应绑定的函数|
 |`RegisterCommandTriggerEvent(TODO Todo)`|对“IsCommandTrigger”注册一个事件函数“Todo”|
+  
+**Example**  
+如果你要注册一个指令，条件为“command=="hello"”，达到条件后执行“Hello()”函数，则你需要这样写：
+```C#
+using DConsole;
+namespace Terminal
+{
+    private void InitRun(object sender, RoutedEventArgs e)
+    {
+        TerminalEvents ordhello = new TerminalEvents();   //定义变量
+        ordhello.RegisterCommandTrigger(Hello);           //绑定事件
+        ordhello.CommandTrigger(command == "hello");      //放置事件检测器，检测事件
+    }
+}
+```
