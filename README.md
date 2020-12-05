@@ -3,7 +3,9 @@
 
 ---------
 
-## 关于DT框架
+## 关于DT框架  
+在github上，请下载“DimensionTerminal.zip”文件，然后解压缩，即可开始使用框架了  
+
 DT框架是Dimensionsoft自主研发的一个“模拟终端”框架，使用***VisualStudio***开发，未来，Dimensionsoft将会使用DT框架进行多种工作，例如管理  
 但请注意，您可以无偿使用DT框架内的所有内容，但所使用的DT框架版权仍属于Dimensionsoft，如果您想要再创作后的成品版权归属与自己的话，请与Dimensionsoft联系  
 联系邮箱：***coreball@foxmail.com***
