@@ -1,0 +1,5 @@
+D:\LiuFlies\Code\VS2019PROJECT\DimensionConsole\obj\Debug\DimensionConsole.csprojAssemblyReference.cache
+D:\LiuFlies\Code\VS2019PROJECT\DimensionConsole\obj\Debug\MainWindow.g.cs
+D:\LiuFlies\Code\VS2019PROJECT\DimensionConsole\obj\Debug\App.g.cs
+D:\LiuFlies\Code\VS2019PROJECT\DimensionConsole\obj\Debug\DimensionConsole_MarkupCompile.cache
+D:\LiuFlies\Code\VS2019PROJECT\DimensionConsole\obj\Debug\DimensionConsole_MarkupCompile.lref
