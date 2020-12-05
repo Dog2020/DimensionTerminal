@@ -72,8 +72,16 @@ namespace Terminal
 **TerminalEvents(class/event)**
 在“Terminal”中，所有事情都是由某一个事件所产生的，所以便出现了一个“TerminalEvents”类  
 这个类的主要作用便是担当“Terminal”的“事件引擎”，负责处理，绑定（注册）事件
+在使用该类之前，您需要知道几个主要的事件：  
+|事件名称|事件概述|事件应用举例|
+|:----|:----:|:----:|
+|**IsError**|未到达某一条件触发该事件|当用户没有输入正确的指令时，执行该事件|
+|**IsCommandTrigger**|当用户输入了/用户输入的字符里包含目标字符，执行该事件|用作指令注册|
+
 以下是该类的几个主要成员：
 |成员名|说明|
 |:----|:----:|
-|`OnIsErr(bool Condition)`|当达到“Condition”时，执行事件“IsErr”对应绑定的函数|
+|`OnIsErr(bool Condition)`|当未达到“Condition”时，执行事件“IsErr”对应绑定的函数|
 |`RegisterIsErrorEvent(TODO Todo)`|对“IsErr”注册一个事件函数“Todo”|
+|`CommandTrigger(bool Condition)`|当达到“Condition”时，执行事件“IsCommandTrigger”对应绑定的函数|
+|`RegisterCommandTriggerEvent(TODO Todo)`|对“IsCommandTrigger”注册一个事件函数“Todo”|
