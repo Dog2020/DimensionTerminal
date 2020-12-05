@@ -62,6 +62,8 @@ namespace Terminal
 {
     private void InitRun(object sender, RoutedEventArgs e)
     {
+        string[] arr = TerminalObject.GetSplit(InputCommand.Text, ' ');   //把输入框的文字以“ ”分割为字符数组
+        TerminalObject.AppendForConsole(OutPut, arr[2])   //输出该数组的第二项
         TerminalObject.AppendForConsole(OutPut, "hello");   //输出文字
     }
 }
@@ -73,4 +75,5 @@ namespace Terminal
 以下是该类的几个主要成员：
 |成员名|说明|
 |:----|:----:|
-|||
+|`OnIsErr(bool Condition)`|当达到“Condition”时，执行事件“IsErr”对应绑定的函数|
+|`RegisterIsErrorEvent(TODO Todo)`|对“IsErr”注册一个事件函数“Todo”|
